@@ -18,7 +18,6 @@ def showImage(img, timeout=0):
     cv2.destroyAllWindows()
 
 
-#
 def auto_thumb(img):
     height, width = img.shape[:2]
     if width >= D_WIDTH:
@@ -59,6 +58,7 @@ if __name__ == '__main__':
     img = cv2.imread(file_path)
     if img is not None:
         print('当前图片尺寸为宽：%s 高：%s' % (img.shape[1], img.shape[0]))
+        showImage(img, 1)
         flag = input('是否缩小比例(y/n)?\n:')
         if flag.lower() == 'y':
             print('缩小倍数：')
